@@ -1,0 +1,21 @@
+@use '@carbon/react';
+@use '@carbon/react/scss/spacing' as *;
+@use '@carbon/react/scss/type' as *;
+@use '@carbon/react/scss/breakpoint' as *;
+@use '@carbon/react/scss/theme' as *;
+@use '@carbon/themes';
+
+$feature-flags: (
+  ui-shell: true,
+  grid-columns-16: true,
+);
+
+
+.cds--grid {
+    width:100vh !important;
+    height:100vh !important;
+    margin-left: 15% !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
