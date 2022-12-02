@@ -35,6 +35,15 @@ const checkboxEvents = {
 };
 //
 
+interface providers {
+  provider: provider[];
+}
+
+interface provider {
+    name: string
+    id: string
+}
+
 
 function Signin({ providers }) {
 
