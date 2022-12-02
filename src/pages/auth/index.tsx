@@ -67,17 +67,17 @@ function Signin({ providers }) {
           <hr className="login-form-divider"></hr>
 
           <div className="alternate-logins">
+            <>
             <div className="login-form-legend">
               <p>Logins alternativos: </p>
             </div>
             {providers &&
              Object.values(providers).map((provider) => (
-                 <Button key={provider.name} kind="tertiary" onClick={() => signIn(provider.id)}>
+               <Button key={provider.name} kind="tertiary" onClick={() => signIn(provider.id)}>
                  Faça login com {provider.name}
                  </Button>
-             ))}
-            {console.log(providers)}
-            
+             ))}            
+             </>
           </div>
           <hr className="login-form-divider"></hr>
 
