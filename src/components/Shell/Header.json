@@ -1,0 +1,26 @@
+{
+  "brand": {
+    "company": "Jacto",
+    "domain": "Sistema de Integração",
+    "product": ""
+  },
+  "notifications": {
+    "button": "Toggle notifications",
+    "title": "Notificações",
+    "today": "Today",
+    "clear_all": "Excluir todas notificações",
+    "clear": "Excluir",
+    "via": "via",
+    "success": "Você não tem novas notificações",
+    "link": "Ver Todas"
+  },
+  "profile": {
+    "button": "Toggle profile",
+    "registration": "Crie uma conta",
+    "sign_in": "Faça Login",
+    "link": "Perfil e conta",
+    "sign_out": "Sair",
+    "edit_profile": "Editar Perfil",
+    "account": "Conta"
+  }
+}

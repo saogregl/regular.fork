@@ -80,7 +80,7 @@ function Signin({ providers }) {
             <div className="login-form-legend">
               <p>Logins alternativos: </p>
             </div>
-            {providers && providers.length &&
+            {providers &&
              Object.values(providers).map((provider : provider) => (
                <Button key={provider.name} kind="tertiary" onClick={() => signIn(provider.id)}>
                  Faça login com {provider.name}
