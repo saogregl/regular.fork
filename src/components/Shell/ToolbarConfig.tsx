@@ -9,7 +9,7 @@ const icon =
  * Generates the initial navigation model.
  */
 const generateNavigationModel = ({
-  href = window.location.host + url(random(30).toString()),
+  href = "/" + url(random(30).toString()),
   id = `${random(30)}`,
   ...props
 }) => ({
