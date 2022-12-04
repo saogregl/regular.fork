@@ -2,12 +2,23 @@ import {  url } from "./url";
 import  random from "./Utils/random"
 import labels from "./Toolbar.json";
 import { Tag } from "@carbon/ibm-security";
+import {
+  Search,
+  Notification,
+  Fade,
+  Switcher as SwitcherIcon,
+  SettingsAdjust,
+  UserAvatarFilledAlt,
+  DataVis_1,
+  OperationsRecord,
+  Asset,
+  ToolKit,
+  Watson,
+  FlowLogsVpc,
+} from "@carbon/icons-react";
 
 const icon =
-  "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+ICA8cGF0aCBmaWxsPSIjZmZmIiBkPSJNMTYgMThINmEyIDIgMCAwIDEtMi0yVjZhMiAyIDAgMCAxIDItMmgxMGEyIDIgMCAwIDEgMiAydjEwYTIgMiAwIDAgMS0yIDJ6TTYgNnYxMGgxMFY2em0yMCA2djRoLTR2LTRoNG0wLTJoLTRhMiAyIDAgMCAwLTIgMnY0YTIgMiAwIDAgMCAyIDJoNGEyIDIgMCAwIDAgMi0ydi00YTIgMiAwIDAgMC0yLTJ6bTAgMTJ2NGgtNHYtNGg0bTAtMmgtNGEyIDIgMCAwIDAtMiAydjRhMiAyIDAgMCAwIDIgMmg0YTIgMiAwIDAgMCAyLTJ2LTRhMiAyIDAgMCAwLTItMnptLTEwIDJ2NGgtNHYtNGg0bTAtMmgtNGEyIDIgMCAwIDAtMiAydjRhMiAyIDAgMCAwIDIgMmg0YTIgMiAwIDAgMCAyLTJ2LTRhMiAyIDAgMCAwLTItMnoiLz48L3N2Zz4=";
-/**
- * Generates the initial navigation model.
- */
+  "data:image/svg+xml;base64,PHN2ZyBpZD0iaWNvbiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiI+PGRlZnM+PHN0eWxlPi5jbHMtMXtmaWxsOndoaXRlO308L3N0eWxlPjwvZGVmcz48dGl0bGU+ZGF0YS12aXMtLTE8L3RpdGxlPjxwYXRoIGQ9Ik0yNiwyMmEzLjk1NTMsMy45NTUzLDAsMCwwLTIuMDE5My41NjY3TDIwLjE2NywxOC43NTI5YTQuOTY1NCw0Ljk2NTQsMCwwLDAsMC01LjUwNThMMjIuNzE0LDEwLjdBMy4wMjg0LDMuMDI4NCwwLDEsMCwyMS4zLDkuMjg2bC0yLjU0NywyLjU0N2E0Ljk2NTQsNC45NjU0LDAsMCwwLTUuNTA1OCwwTDkuNDMzMiw4LjAxOTFBMy45NTUzLDMuOTU1MywwLDAsMCwxMCw2YTQsNCwwLDEsMC00LDQsMy45NTUzLDMuOTU1MywwLDAsMCwyLjAxOTEtLjU2NjhsMy44MTM5LDMuODEzOWE0Ljk2NTQsNC45NjU0LDAsMCwwLDAsNS41MDU4TDguMDE5MiwyMi41NjY4QTMuOTU1NiwzLjk1NTYsMCwwLDAsNiwyMmE0LDQsMCwxLDAsNCw0LDMuOTU1MywzLjk1NTMsMCwwLDAtLjU2NjctMi4wMTkybDMuODEzOC0zLjgxMzhBNC45Njg2LDQuOTY4NiwwLDAsMCwxNSwyMC44OTg5djMuMjg0OGEzLDMsMCwxLDAsMiwwVjIwLjg5ODlhNC45Njg2LDQuOTY4NiwwLDAsMCwxLjc1MjktLjczMTlsMy44MTM4LDMuODEzN0EzLjk1NTMsMy45NTUzLDAsMCwwLDIyLDI2YTQsNCwwLDEsMCw0LTRaTTE2LDEzYTMsMywwLDEsMS0zLDNBMy4wMDMzLDMuMDAzMywwLDAsMSwxNiwxM1pNNCw2QTIsMiwwLDEsMSw2LDgsMi4wMDIsMi4wMDIsMCwwLDEsNCw2Wk02LDI4YTIsMiwwLDEsMSwyLTJBMi4wMDIzLDIuMDAyMywwLDAsMSw2LDI4Wm0yMCwwYTIsMiwwLDEsMSwyLTJBMi4wMDI3LDIuMDAyNywwLDAsMSwyNiwyOFoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgMCkiLz48cmVjdCBpZD0iX1RyYW5zcGFyZW50X1JlY3RhbmdsZV8iIGRhdGEtbmFtZT0iJmx0O1RyYW5zcGFyZW50IFJlY3RhbmdsZSZndDsiIGNsYXNzPSJjbHMtMSIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIi8+PC9zdmc+"
 const generateNavigationModel = ({
   href = "/" + url(random(30).toString()),
   id = `${random(30)}`,
@@ -44,7 +55,6 @@ const generateApplications = (array) =>
 const applicationsToGenerate = [
   {
     title: "Painel de controle",
-    icon,
     children: generateApplications([
       { title: "Resumo" },
       { title: "Estatísticas" },
@@ -61,16 +71,28 @@ const menu = [
     "",
     generateApplications([
       {
-        title: "Section 4",
+        title: "Projeto e desenvolvimento",
         href: "/Design",
       },
       {
-        title: "Section 5",
-        icon,
+        title: "Planejamento",
+        href: "/Planning",
       },
       {
-        title: "Section 6",
+        title: "Manufatura",
+        href: "/Manufacturing",
+
       },
+      {
+        title: "Validação",
+        href: "/Validation",
+      },
+
+      {
+        title: "Análise",
+        href: "/Analysis",
+      },
+
     ])
   ),
 ];

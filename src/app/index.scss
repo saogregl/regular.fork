@@ -1,6 +1,10 @@
-.main-dashboard-content{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  
+@use '@carbon/react/scss/colors';
+@use '@carbon/styles/scss/theme';
+
+.dashboard-content{
+    background-color: #161616;
+}
+
+.outside { 
+    background-color: #262626;
 }
