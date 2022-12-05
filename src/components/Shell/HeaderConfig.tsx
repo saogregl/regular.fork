@@ -19,7 +19,7 @@
    profile: url(),
    registration: url(),
    sign_in: url(),
-   sign_out: url(),
+   sign_out: url("/api/auth/signout"),
    edit_profile: url(),
    notifications_preferences: url(),
    notifications_view_all: url(),
